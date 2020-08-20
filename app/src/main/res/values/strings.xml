@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SMART FILMES</string>
+    <string name="entrar">Entrar</string>
+    <string name="cadastrar">Cadastrar</string>
+</resources>

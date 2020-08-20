@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "836360753102",
+    "firebase_url": "https://testepraticoredeindustrial.firebaseio.com",
+    "project_id": "testepraticoredeindustrial",
+    "storage_bucket": "testepraticoredeindustrial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836360753102:android:bfa62315f854210cd7259f",
+        "android_client_info": {
+          "package_name": "com.example.teste_redeindustrial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836360753102-j33vitj4sfr7qjnqifglp43m7lvb9bfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnEEReDOUp77p5nQUSUJe-w1P4JfJkuA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836360753102-j33vitj4sfr7qjnqifglp43m7lvb9bfm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
