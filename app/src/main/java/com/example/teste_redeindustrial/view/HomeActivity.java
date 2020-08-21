@@ -25,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
                 if(!editTitulo.getText().toString().equals("") && !editID.getText().toString().equals("")){
                     Toast.makeText(HomeActivity.this, "Faça apenas 1 tipo de pesquisa", Toast.LENGTH_SHORT).show();
                 }else{
+
                     titulo = editTitulo.getText().toString();
                     id = editID.getText().toString();
                     Movie movie = new Movie();

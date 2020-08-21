@@ -15,7 +15,9 @@ import org.json.JSONObject;
 import java.util.List;
 
 public class MovieController {
+
     private RequestQueue requestQueue;
+
     Movie movie = new Movie();
     public Movie buscarFilme(String titulo, String id){
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, montarURL(titulo, id), null, new Response.Listener<JSONArray>() {
