@@ -2,22 +2,22 @@ package com.example.teste_redeindustrial.model;
 
 public class Ratings {
 
-    private String source;
-    private String value;
+    private String Source;
+    private String Value;
 
     public String getSource() {
-        return source;
+        return Source;
     }
 
     public String getValue() {
-        return value;
+        return Value;
     }
 
     public void setSource(String source) {
-        source = source;
+        Source = source;
     }
 
     public void setValue(String value) {
-        value = value;
+        Value = value;
     }
 }

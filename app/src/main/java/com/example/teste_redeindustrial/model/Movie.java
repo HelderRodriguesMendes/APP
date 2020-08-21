@@ -6,29 +6,29 @@ import java.util.List;
 public class Movie {
     private String title;
     private Integer year;
-    private String rated;
-    private String released;
-    private String runtime;
-    private String genre;
-    private String director;
-    private String writer;
-    private String actors;
-    private String plot;
-    private String language;
-    private String country;
-    private String awards;
-    private String poster;
+    private String Rated;
+    private String Released;
+    private String Runtime;
+    private String Genre;
+    private String Director;
+    private String Writer;
+    private String Actors;
+    private String Plot;
+    private String Language;
+    private String Country;
+    private String Awards;
+    private String Poster;
     private List<Ratings> ratings;
-    private Integer metascore;
+    private Integer Metascore;
     private Double imdbRating;
     private Double imdbVotes;
     private String imdbID;
-    private String type;
-    private String dvd;
-    private String boxOffice;
-    private String production;
-    private String website;
-    private boolean response;
+    private String Type;
+    private String DVD;
+    private String BoxOffice;
+    private String Production;
+    private String Website;
+    private boolean Response;
 
     public String getTitle() {
         return title;
@@ -39,51 +39,51 @@ public class Movie {
     }
 
     public String getRated() {
-        return rated;
+        return Rated;
     }
 
     public String getReleased() {
-        return released;
+        return Released;
     }
 
     public String getRuntime() {
-        return runtime;
+        return Runtime;
     }
 
     public String getGenre() {
-        return genre;
+        return Genre;
     }
 
     public String getDirector() {
-        return director;
+        return Director;
     }
 
     public String getWriter() {
-        return writer;
+        return Writer;
     }
 
     public String getActors() {
-        return actors;
+        return Actors;
     }
 
     public String getPlot() {
-        return plot;
+        return Plot;
     }
 
     public String getLanguage() {
-        return language;
+        return Language;
     }
 
     public String getCountry() {
-        return country;
+        return Country;
     }
 
     public String getAwards() {
-        return awards;
+        return Awards;
     }
 
     public String getPoster() {
-        return poster;
+        return Poster;
     }
 
     public List<Ratings> getRatings() {
@@ -91,7 +91,7 @@ public class Movie {
     }
 
     public Integer getMetascore() {
-        return metascore;
+        return Metascore;
     }
 
     public Double getImdbRating() {
@@ -107,27 +107,27 @@ public class Movie {
     }
 
     public String getType() {
-        return type;
+        return Type;
     }
 
-    public String getDvd() {
-        return dvd;
+    public String getDVD() {
+        return DVD;
     }
 
     public String getBoxOffice() {
-        return boxOffice;
+        return BoxOffice;
     }
 
     public String getProduction() {
-        return production;
+        return Production;
     }
 
     public String getWebsite() {
-        return website;
+        return Website;
     }
 
     public boolean isResponse() {
-        return response;
+        return Response;
     }
 
     public void setTitle(String title) {
@@ -139,51 +139,51 @@ public class Movie {
     }
 
     public void setRated(String rated) {
-        this.rated = rated;
+        Rated = rated;
     }
 
     public void setReleased(String released) {
-        this.released = released;
+        Released = released;
     }
 
     public void setRuntime(String runtime) {
-        this.runtime = runtime;
+        Runtime = runtime;
     }
 
     public void setGenre(String genre) {
-        this.genre = genre;
+        Genre = genre;
     }
 
     public void setDirector(String director) {
-        this.director = director;
+        Director = director;
     }
 
     public void setWriter(String writer) {
-        this.writer = writer;
+        Writer = writer;
     }
 
     public void setActors(String actors) {
-        this.actors = actors;
+        Actors = actors;
     }
 
     public void setPlot(String plot) {
-        this.plot = plot;
+        Plot = plot;
     }
 
     public void setLanguage(String language) {
-        this.language = language;
+        Language = language;
     }
 
     public void setCountry(String country) {
-        this.country = country;
+        Country = country;
     }
 
     public void setAwards(String awards) {
-        this.awards = awards;
+        Awards = awards;
     }
 
     public void setPoster(String poster) {
-        this.poster = poster;
+        Poster = poster;
     }
 
     public void setRatings(List<Ratings> ratings) {
@@ -191,7 +191,7 @@ public class Movie {
     }
 
     public void setMetascore(Integer metascore) {
-        this.metascore = metascore;
+        Metascore = metascore;
     }
 
     public void setImdbRating(Double imdbRating) {
@@ -207,26 +207,26 @@ public class Movie {
     }
 
     public void setType(String type) {
-        this.type = type;
+        Type = type;
     }
 
-    public void setDvd(String dvd) {
-        this.dvd = dvd;
+    public void setDVD(String DVD) {
+        this.DVD = DVD;
     }
 
     public void setBoxOffice(String boxOffice) {
-        this.boxOffice = boxOffice;
+        BoxOffice = boxOffice;
     }
 
     public void setProduction(String production) {
-        this.production = production;
+        Production = production;
     }
 
     public void setWebsite(String website) {
-        this.website = website;
+        Website = website;
     }
 
     public void setResponse(boolean response) {
-        this.response = response;
+        Response = response;
     }
 }
