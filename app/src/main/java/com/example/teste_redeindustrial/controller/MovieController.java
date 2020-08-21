@@ -6,20 +6,24 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.teste_redeindustrial.model.Movie;
+import com.example.teste_redeindustrial.view.HomeActivity;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MovieController {
 
     private RequestQueue requestQueue;
+    List<Movie> movies = new ArrayList<>();
 
     Movie movie = new Movie();
-    public Movie buscarFilme(String titulo, String id){
+
+    public void buscarFilme(final HomeActivity activity, String titulo, String id){
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, montarURL(titulo, id), null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray jsonArray) {
@@ -27,7 +31,9 @@ public class MovieController {
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject MOVIE = jsonArray.getJSONObject(i);
                         movie = new Gson().fromJson(MOVIE.toString(), Movie.class);
+                        movies.add(movie);
                     }
+                    activity.request_result(movies);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -40,11 +46,12 @@ public class MovieController {
         });
         requestQueue.add(request);
         System.out.println("TITLE: " + movie.getTitle());
-
-        return movie;
     }
 
-    private String montarURL(String titulo, String id){
+
+
+
+    public String montarURL(String titulo, String id){
         String URL = "";
         final String urlTitulo = "http://www.omdbapi.com/?t=";
         final String urlID = "http://www.omdbapi.com/?i=";

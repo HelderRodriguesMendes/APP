@@ -45,7 +45,7 @@
         android:background="@drawable/bg_edittext_rounded"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Nome..."
+        android:hint="Título"
         android:paddingLeft="8dp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.495"
@@ -59,7 +59,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/bg_edittext_rounded"
         android:ems="10"
-        android:hint="Número de identificação..."
+        android:hint="IMDb ID"
         android:inputType="textPersonName"
         android:paddingLeft="8dp"
         app:layout_constraintEnd_toEndOf="@+id/edit_titulo"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edit_titulo" />
 
     <Button
-        android:id="@+id/btn_pesquisar"
+        android:id="@+id/btnpesquisar"
         android:layout_width="175dp"
         android:layout_height="47dp"
         android:layout_marginTop="32dp"
