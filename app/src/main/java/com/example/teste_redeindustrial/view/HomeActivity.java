@@ -12,23 +12,27 @@ import android.widget.Toast;
 import com.example.teste_redeindustrial.R;
 import com.example.teste_redeindustrial.controller.MovieController;
 import com.example.teste_redeindustrial.model.Movie;
+import com.example.teste_redeindustrial.request.BuscarFilmeService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//import retrofit2.Retrofit;
-//import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomeActivity extends AppCompatActivity {
     private EditText editTitulo;
     private EditText editID;
     private Button btn_pesquisar;
-    //private Retrofit retrofit;
+    private Retrofit retrofit;
 
     MovieController movieController;
     List<Movie> movieList;
 
-            String titulo = "";
+    String titulo = "";
     String id = "";
 
     @Override
@@ -40,8 +44,8 @@ public class HomeActivity extends AppCompatActivity {
         editID = findViewById(R.id.edit_id);
         btn_pesquisar = findViewById(R.id.btnpesquisar);
 
-        /*retrofit = new Retrofit.Builder().baseUrl("http://www.omdbapi.com/?")
-                .addConverterFactory(GsonConverterFactory.create()).build();*/
+        retrofit = new Retrofit.Builder().baseUrl("http://www.omdbapi.com")
+                .addConverterFactory(GsonConverterFactory.create()).build();
 
         btn_pesquisar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,16 +58,33 @@ public class HomeActivity extends AppCompatActivity {
                     titulo = editTitulo.getText().toString();
                     id = editID.getText().toString();
                     movieController = new MovieController();
-                    movieController.buscarFilme(HomeActivity.this, titulo, id);
+                    buscarFilme(id, titulo);
+
+
                 }
             }
         });
     }
-    public  void request_result(List<Movie> list){
-        movieList = new ArrayList<>();
-        movieList = list;
-        for (Movie m : movieList){
-            System.out.println("TITLE: " + m.getTitle());
-        }
+
+    public void buscarFilme(String id, String titulo){
+        System.out.println("AQUI1");
+        BuscarFilmeService filmeService = retrofit.create(BuscarFilmeService.class);
+        Call<Movie> call = filmeService.buscarfilmeTitulo();
+
+        call.enqueue(new Callback<Movie>() {
+            Movie movie = new Movie();
+            @Override
+            public void onResponse(Call<Movie> call, Response<Movie> response) {
+                if(response.isSuccessful()){
+                    movie = response.body();
+                    System.out.println("TITULO: " + movie.getTitle());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Movie> call, Throwable t) {
+
+            }
+        });
     }
 }
